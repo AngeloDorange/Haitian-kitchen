@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.reservation{
+    width: 100%;
+    height: auto;
+    background: rgba( 0, 0, 0, 0.8 );
+    position: relative;
+    display: none;
+    transition: .7s ease-in;
+    -webkit-transition: .7s ease-in;
+    -moz-transition: .7s ease-in;
+    -ms-transition: .7s ease-in;
+    -o-transition: .7s ease-in;
+}
+
+.reservation .container{
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    position: fixed;
+    background: rgba( 0, 0, 0, 0.8 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: .1rem;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding-left: 2rem;
+    padding-right: 2rem;
+    -webkit-border-radius: .1rem;
+    -moz-border-radius: .1rem;
+    -ms-border-radius: .1rem;
+    -o-border-radius: .1rem;
+    padding-top: 1rem;
+    height: 100vh;
+    width: 90%;
+}
+.mail{
+    display: flex;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.form h1{
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+    background: transparent;
+    border: 2px solid #3af24b;
+    resize: none;
+    color: #fff;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.row__btn{
+    display: flex;
+    gap: 1rem;
+}
+button, .btn{
+    font-size: 1.3rem;
+    cursor: pointer;
+    background: #3af24b;
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    transition: .8s ease;
+    -webkit-transition: .8s ease;
+    -moz-transition: .8s ease;
+    -ms-transition: .8s ease;
+    -o-transition: .8s ease;
+}
+
+.btn{
+    background: #000;
+    border: 1px solid #000;
+}
+.btn:hover,button:hover {
+    background: transparent;
+    border: 1px solid #3af24b;
+}
+
+
+@media (max-width: 425px){
+    .form h1{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 350px){
+    input::placeholder, textarea::placeholder{
+        font-size: .7rem;
+    }
+    .reservation .container{
+        width: 90%;
+    }
+}

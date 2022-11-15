@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    background: #f8f8ff;
+    height: 5rem;
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 99;
+    box-shadow: 0 -5px 10px crimson;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+label.logo{
+    color: #000;
+    font-size: 1.3em;
+    line-height: 80px;
+    padding: 0 7%;
+    font-weight: 700;
+    font-family: 'Spline Sans Mono', sans-serif;
+}
+label.logo .uil{
+    color: crimson;
+}
+nav ul{
+    float: right;
+    /*margin-right: 80px;*/
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    margin: auto;
+}
+nav ul li a{
+    color: #aaa;
+    font-size: 1em;
+    padding: 7px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    position: relative;
+    font-weight: 200;
+}
+ul li a::before {
+    content: "";
+    width: 0px;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+}
+
+nav ul li a:hover::before {
+    width: 70%;
+    transform: translateX(30%);
+    -webkit-transform: translateX(30%);
+    -moz-transform: translateX(30%);
+    -ms-transform: translateX(30%);
+    -o-transform: translateX(30%);
+}
+/*.dist{
+    margin-right: 120px;
+}*/
+
+a.active,a:hover{
+    color: crimson;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+
+
+.btn__table{
+   margin-right: 95px;
+   padding: 7% 0;
+   line-height: 5rem;
+}
+
+.btn-reser{
+    background-color: crimson;
+    color: #fff;
+    transition: .5s ease-in;
+    -webkit-transition: .5s ease-in;
+    -moz-transition: .5s ease-in;
+    -ms-transition: .5s ease-in;
+    -o-transition: .5s ease-in;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+.btn-reser:hover{
+    border: none;
+    background: #000;
+    transition: .5s ease-in;
+    -webkit-transition: .5s ease-in;
+    -moz-transition: .5s ease-in;
+    -ms-transition: .5s ease-in;
+    -o-transition: .5s ease-in;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: crimson;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    transition: .7s ease-in;
+    padding: 7% 0;
+    -webkit-transition: .7s ease-in;
+    -moz-transition: .7s ease-in;
+    -ms-transition: .7s ease-in;
+    -o-transition: .7s ease-in;
+}
+.checkbtn:hover{
+    color: #000;
+}
+#check{
+    display: none;
+}
+
+
+
+
+@media (min-width: 1024px) and (max-width: 1041px){
+    label.logo{
+        font-size: 85%;
+    }
+    nav ul li a{
+        font-size: 80%;
+    }
+}
+
+
+@media (max-width: 1023px){
+    .checkbtn{
+      display: block;
+    }
+    nav{
+        justify-content: space-between;
+    }
+    nav ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      color: #fff;
+      font-weight: 700;
+      background: #000;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s ease-in;
+      -webkit-transition: all .5s ease-in;
+      -moz-transition: all .5s ease-in;
+      -ms-transition: all .5s ease-in;
+      -o-transition: all .5s ease-in;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    a:hover,a.active{
+      background: none;
+      color: crimson;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+}
+  
+  
+@media (max-width: 650px){
+    label.logo, .btn-reser{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (max-width: 565px){
+    label.logo, .btn-reser{
+        font-size: 75%;
+    }
+    .btn__table{
+        margin-right: 1.2rem;
+    }
+
+}
+
+@media (max-width: 407px){
+    label.logo, .btn-reser{
+        font-size: 65%;
+    }
+    .btn__table{
+        margin-right: 0.625rem;
+    }
+
+}
+
+@media (max-width: 337px){
+    label.logo, .btn-reser{
+        font-size: 55%;
+    }
+    .btn__table{
+        margin-right: 0.6rem;
+    }
+
+}
